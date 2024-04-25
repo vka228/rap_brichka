@@ -63,6 +63,10 @@ void loop() {
         analogWrite(SPEED_1, 255); // Full speed
         analogWrite(SPEED_2, 255); // Full speed
       } 
+      else{
+      analogWrite(SPEED_1, 0);
+      analogWrite(SPEED_2, 0);
+    }
     }
 
     // фигачим прямо
@@ -73,6 +77,10 @@ void loop() {
         analogWrite(SPEED_1, 255); // Full speed
         analogWrite(SPEED_2, 255); // Full speed
       }
+      else{
+      analogWrite(SPEED_1, 0);
+      analogWrite(SPEED_2, 0);
+    }
     }
 
     // фигачим назад
@@ -83,21 +91,29 @@ void loop() {
         analogWrite(SPEED_1, 255); // Full speed
         analogWrite(SPEED_2, 255); // Full speed
       }
-    }
 
-    // если джойсик в другом месте, то стоп машина
-    else{
+      else{
       analogWrite(SPEED_1, 0);
       analogWrite(SPEED_2, 0);
     }
+    }
+
+
+    // если джойсик в другом месте, то стоп машина
+    
+
+
 
 
     // фигачим факел бля
     if (btnState == 0) {
       digitalWrite(LAMP_PIN, HIGH); // Turn on the lamp
-    } else {
-      digitalWrite(LAMP_PIN, LOW); // Turn off the lamp if btnState is not 0
-    }
+    } 
+
+    else if (btnState == 1) {
+      digitalWrite(LAMP_PIN, LOW); // Turn off the lamp
+    } 
+    
       
   }
 }
