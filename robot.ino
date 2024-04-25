@@ -39,10 +39,7 @@ void loop() {
     int xPosition = data[0];
     int yPosition = data[1];
     int btnState = data[2];
-    int tmblrState = data[3];
-    int ptmrVal = data[4];
 
-    Serial.println("Xj:" + String(xPosition) + "; Yj:" + String(yPosition) + "; Btn:" + String(btnState) + "; Tmblr:" + String(tmblrState) + "; Ptr:" + String(ptmrVal));
 
 
     // чекаем чё там по игреку
